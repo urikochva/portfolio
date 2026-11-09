@@ -71,6 +71,8 @@ html{accent-color:#35605F;scroll-behavior:smooth}
 .sw>span{width:64px;height:64px;border-radius:12px;box-sizing:border-box;flex:none}
 .shot img{display:block;width:100%;max-width:1100px;height:auto}
 .todo{background:#F5E1D7;padding:0 4px}
+.dframe{position:relative;width:100%;max-width:1100px;aspect-ratio:1440/900;overflow:hidden;background:#F6F2EA;border:1px solid #35605F;box-sizing:border-box}
+.dframe iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
 </style>
 </head>
 <body>
@@ -88,7 +90,11 @@ html{accent-color:#35605F;scroll-behavior:smooth}
     <p class="serif" style="margin:clamp(24px,3vw,36px) 0 0;max-width:30ch;font-size:clamp(26px,2.6vw,38px);line-height:1.25;font-weight:300;letter-spacing:-.01em">A calm money app for freelancers, from the brand to a working web prototype.</p>
     <p style="margin:24px 0 0;max-width:62ch;font-size:clamp(18px,1.5vw,21px);line-height:1.6">Freelancers earn uneven money from many clients, chase invoices by hand and dread tax season. Grove’s promise is “We make the complex stuff easy”: open it, understand your month in a few seconds, and feel calmer than before you opened it.</p>
     <dl style="margin:clamp(48px,6vw,72px) 0 0"><div class="dl"><dt>Type</dt><dd>Brand identity, web UI/UX, product design</dd></div><div class="dl"><dt>Deliverables</dt><dd>Brand sheet, public website, web app: dashboard, cash flow, projects, invoices, expenses and tax jar</dd></div><div class="dl" style="border-bottom:1px solid #35605F"><dt>Tools</dt><dd>Claude Design, for fast design iteration</dd></div></dl>
-    <nav aria-label="On this page" style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="#brand">01 Brand</a><a class="btn" href="#site">02 Website</a><a class="btn" href="#app">03 The app</a></nav>
+    <nav aria-label="On this page" style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="#proto">Try the app</a><a class="btn" href="#brand">01 Brand</a><a class="btn" href="#site">02 Website</a><a class="btn" href="#app">03 The app</a></nav>
+
+    <section aria-labelledby="proto" style="margin-top:clamp(72px,9vw,120px)"><h2 id="proto" class="serif" style="margin:0 0 20px;font-weight:300;font-size:clamp(34px,3.6vw,52px);line-height:1.05;letter-spacing:-.025em">Interactive prototype</h2><p style="margin:0 0 24px;max-width:56ch">Click through the working web app, starting on the dashboard: open cash flow, the tax jar, invoices and projects from the menu.</p>
+    <div style="display:flex;justify-content:center;background:#CFE0D8;padding:clamp(16px,3vw,40px)"><div class="dframe"><iframe title="Grove web app prototype, desktop view" loading="lazy" allow="fullscreen" src="https://urikochva.github.io/grove/dashboard.html"></iframe></div></div>
+    <p style="margin:16px 0 0;font-size:15px">Prefer a bigger view? <a class="ul" href="https://urikochva.github.io/grove/dashboard.html" target="_blank" rel="noopener noreferrer">Open the app in a new tab</a></p></section>
 
     <section aria-labelledby="brand" style="margin-top:clamp(72px,9vw,120px)"><p style="margin:0 0 8px;font-size:15px">01</p><h2 id="brand" class="serif" style="margin:0 0 20px;font-weight:300;font-size:clamp(34px,3.6vw,52px);line-height:1.05;letter-spacing:-.025em">Brand: a weaving draft</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px clamp(24px,4vw,56px);padding:24px 0;border-top:1px solid #35605F;border-bottom:1px solid #35605F"><div><p style="margin:0 0 8px;font-size:15px">Calm over control</p><p style="margin:0">Plain words, a “safe to spend” number and gentle status language. Feelings first, accounting second.</p></div><div><p style="margin:0 0 8px;font-size:15px">An automatic tax jar</p><p style="margin:0">A set share of every payment is put aside for tax, so tax season is never a shock.</p></div><div><p style="margin:0 0 8px;font-size:15px">A safety net for thin months</p><p style="margin:0">Grove works out a steady monthly pay: save the extra in good months, draw on it in thin ones.</p></div></div>
@@ -125,5 +131,14 @@ html{accent-color:#35605F;scroll-behavior:smooth}
   </footer>
 </div>
 </div>
+<script>
+/* Show the Grove app at its 1440px desktop width, scaled down to fit the frame. */
+document.querySelectorAll('.dframe').forEach(function(box){
+  var f=box.querySelector('iframe');
+  function fit(){ f.style.transform='scale('+(box.clientWidth/1440)+')'; }
+  fit();
+  if(window.ResizeObserver){ new ResizeObserver(fit).observe(box); } else { window.addEventListener('resize',fit); }
+});
+</script>
 </body>
 </html>
