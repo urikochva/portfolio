@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Don’t Mess With The Zohan — Uri Kochva</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Don’t Mess With The Zohan: a family-friendly one-page site for streaming the movie and buying official merch.">
+<meta property="og:title" content="Don’t Mess With The Zohan — Uri Kochva">
+<meta property="og:description" content="Brand identities, web UI/UX and motion graphics. Open to full-time roles.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2064%2064%27%3E%3Crect%20width=%2764%27%20height=%2764%27%20rx=%2714%27%20fill=%27%23FFFFFF%27/%3E%3Cg%20fill=%27%2335605F%27%3E%3Cpath%20transform=%22translate%285.87%2044.00%29%20scale%280.01790%20-0.01790%29%22%20d=%22M1159%201262%20979%201288V1341H1436V1288L1264%201262V461Q1264%20220%201131.5%20100.0Q999%20-20%20747%20-20Q480%20-20%20347.5%20100.5Q215%20221%20215%20442V1262L43%201288V1341H579V1288L407%201262V457Q407%2092%20762%2092Q954%2092%201056.5%20183.0Q1159%20274%201159%20453Z%22/%3E%3Cpath%20transform=%22translate%2831.27%2044.00%29%20scale%280.01790%20-0.01790%29%22%20d=%22M1353%201341V1288L1198%201262L740%20814L1313%2080L1458%2053V0H1130L605%20678L424%20533V80L616%2053V0H59V53L231%2080V1262L59%201288V1341H596V1288L424%201262V630L1066%201262L933%201288V1341Z%22/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:url" content="https://urikochva.github.io/portfolio/zohan.html">
+<meta property="og:image" content="https://urikochva.github.io/portfolio/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://urikochva.github.io/portfolio/og-image.jpg">
+<link rel="canonical" href="https://urikochva.github.io/portfolio/zohan.html">
+<meta name="theme-color" content="#F6F2EA">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+h1,h2{text-wrap:balance}
+p{text-wrap:pretty}
+[id]{scroll-margin-top:24px}
+a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:12px;padding:12px 20px;background:#CFE0D8;color:#35605F;font-size:15px;z-index:10}
+::selection{background:#E9C4B5;color:#35605F}
+html{accent-color:#35605F;scroll-behavior:smooth}
+.skip:focus{left:12px}
+.serif{font-family:'Newsreader',Georgia,'Times New Roman',serif}
+.navl{display:inline-flex;align-items:center;min-height:44px;padding:0 3px;margin:0 -3px;text-decoration:none;font-size:15px;background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-position:0 70%;background-repeat:no-repeat;transition:background-size 200ms ease-out}
+.navl:hover,.navl[aria-current]{background-size:100% 1px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 32px;border:1px solid #35605F;border-radius:999px;background:transparent;color:#35605F;font-size:17px;font-weight:500;text-decoration:none;transition:background-color 150ms ease}
+.btn:hover{background:#F5E1D7}
+.btn.fill{background:#35605F;color:#F6F2EA}
+.btn.fill:hover{background:#2A4E4D}
+.btn:active{transform:scale(.98)}
+.row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) 24px;align-items:center;gap:8px 24px;padding:24px 0;border-top:1px solid #35605F;text-decoration:none;color:inherit;transition:color 150ms ease}
+.ttl{transition:transform 200ms ease-out}
+.row:hover .ttl{transform:translateX(12px)}
+.row:hover .desc{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#E9C4B5;text-decoration-thickness:2px}
+.row svg{justify-self:end;stroke:#35605F}
+.ttl{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(30px,3.6vw,52px);line-height:1.05;letter-spacing:-.025em}
+.desc{font-size:17px;line-height:1.4}
+@media (max-width:820px){.row{grid-template-columns:1fr 24px}.ttl{grid-column:1/-1}.desc{grid-column:1}.row svg{grid-column:2}}
+.ul{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.ul:hover{text-decoration-thickness:2px}
+@media (prefers-reduced-motion:reduce){.navl,.btn,.row{transition:none}html{scroll-behavior:auto}.ttl{transition:none}}
+.pl{display:inline-flex;align-items:center;min-height:44px}
+.dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:8px 24px;padding:24px 0;border-top:1px solid #35605F}
+.dl dt{font-size:15px}
+.dl dd{margin:0}
+@media (max-width:820px){.dl{grid-template-columns:1fr}}
+.about-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px clamp(24px,4vw,72px);align-items:start}
+.about-grid figure{width:100%;max-width:none!important}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}.about-grid figure{max-width:420px!important}}
+.ph{display:flex;align-items:center;justify-content:center;background:#F5E1D7;border:1px dashed #35605F;box-sizing:border-box;margin-top:16px}
+.ph span{font-size:15px;opacity:.7}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g2 .ph{margin-top:16px}
+@media (max-width:700px){.g2{grid-template-columns:1fr}}
+.shot{margin:clamp(56px,7vw,96px) 0 0;display:flex;flex-direction:column;align-items:center;box-sizing:border-box}
+.shot>img{display:block;width:100%;height:auto}
+.shot figcaption{order:-1;align-self:stretch;margin:0 0 28px;font-size:17px;line-height:1.5}
+.shot figcaption strong{display:block;margin-bottom:8px;font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(24px,2vw,30px);line-height:1.1;letter-spacing:-.02em}
+.scrollframe{width:100%;max-width:900px;height:min(80vh,820px);overflow-y:auto;border:1px solid #35605F;box-sizing:border-box}
+.sws{display:flex;flex-wrap:wrap;gap:24px 48px}
+.sw{display:flex;align-items:center;gap:16px;font-size:15px;line-height:1.4}
+.sw>span{width:64px;height:64px;border-radius:12px;box-sizing:border-box;flex:none}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px clamp(24px,4vw,56px);padding:24px 0;border-top:1px solid #35605F;border-bottom:1px solid #35605F}
+.cols p{margin:0}
+.cols .k{margin:0 0 8px;font-size:15px}
+.h3{margin:56px 0 16px;font-weight:300;font-size:clamp(26px,2.4vw,34px);line-height:1.1;letter-spacing:-.02em}
+.todo{background:#F5E1D7;padding:0 4px}
+</style>
+</head>
+<body>
+
+<div style="position:relative;font-family:'Bricolage Grotesque',Helvetica,Arial,sans-serif;background:#F6F2EA;color:#35605F;font-size:17px;line-height:1.5">
+<a class="skip" href="#main">Skip to content</a>
+<div style="max-width:1344px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(20px,6vw,96px) clamp(20px,3vw,40px);box-sizing:border-box">
+  <header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-bottom:20px;border-bottom:1px solid #35605F">
+    <a class="serif pl" href="./index.html" style="text-decoration:none;font-weight:300;font-size:28px;letter-spacing:-.02em">Uri Kochva</a>
+    <nav aria-label="Main" style="display:flex;flex-wrap:wrap;gap:0 28px"><a class="navl" href="./about.html">About</a><a class="navl" href="./projects.html" aria-current="page">Projects</a><a class="navl" href="./contact.html">Contact</a></nav>
+  </header>
+  <main id="main">
+    <a class="navl" href="./projects.html" style="margin-top:24px;margin-left:-3px">← All projects</a>
+    <h1 class="serif" style="margin:clamp(24px,5vw,64px) 0 0;font-weight:300;font-size:clamp(52px,9vw,136px);line-height:.95;letter-spacing:-.04em">Don’t Mess With The&nbsp;Zohan</h1>
+    <p class="serif" style="margin:clamp(24px,3vw,36px) 0 0;max-width:30ch;font-size:clamp(26px,2.6vw,38px);line-height:1.25;font-weight:300;letter-spacing:-.01em">A family-friendly one-page site to stream the movie and shop its merch.</p>
+    <p style="margin:24px 0 0;max-width:62ch;font-size:clamp(18px,1.5vw,21px);line-height:1.6">Fans have no single place to watch the movie or buy anything from it, and its grown-up marketing shuts out families. This site brings streaming and an official store together in one safe, cheerful space for parents and kids.</p>
+    <dl style="margin:clamp(48px,6vw,72px) 0 0"><div class="dl"><dt>Type</dt><dd>One-page website, UX/UI</dd></div><div class="dl"><dt>Deliverables</dt><dd>UX research, interactive prototype</dd></div><div class="dl" style="border-bottom:1px solid #35605F"><dt>Tools</dt><dd>Figma</dd></div></dl>
+    <nav aria-label="On this page" style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="#proto">01 Prototype</a><a class="btn" href="#ux">02 UX</a><a class="btn" href="#colours">03 Colours</a></nav>
+
+    <section aria-labelledby="proto" style="margin-top:clamp(72px,9vw,120px)"><p style="margin:0 0 8px;font-size:15px">01</p><h2 id="proto" class="serif" style="margin:0 0 20px;font-weight:300;font-size:clamp(34px,3.6vw,52px);line-height:1.05;letter-spacing:-.025em">The website</h2>
+    <p style="margin:0 0 24px;max-width:56ch">Click through the site prototype, built in Figma.</p>
+    <div style="display:flex;justify-content:center"><div style="position:relative;width:100%;max-width:960px;aspect-ratio:16/9;background:#F6F2EA;border:1px solid #35605F;box-sizing:border-box"><iframe title="site prototype" loading="lazy" allowfullscreen src="https://embed.figma.com/proto/T2Uu4lWuo6n4e0jGtpeTHn/UIUX-Movie-Website?node-id=110-23&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;embed-host=share" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div></div>
+    <p style="margin:16px 0 0;font-size:15px">Prefer a bigger view? <a class="ul" href="https://www.figma.com/proto/T2Uu4lWuo6n4e0jGtpeTHn/UIUX-Movie-Website?node-id=110-23&amp;scaling=scale-down-width&amp;content-scaling=fixed" target="_blank" rel="noopener noreferrer">Open it in Figma</a></p>
+    </section>
+    <section aria-labelledby="ux" style="margin-top:clamp(72px,9vw,120px)"><p style="margin:0 0 8px;font-size:15px">02</p><h2 id="ux" class="serif" style="margin:0 0 20px;font-weight:300;font-size:clamp(34px,3.6vw,52px);line-height:1.05;letter-spacing:-.025em">UX</h2>
+    <h3 class="serif h3" style="margin-top:32px">Pain points</h3>
+    <div class="cols"><div><p class="k">Hard to find the movie</p><p>Fans have to hunt across different platforms just to find somewhere to watch it.</p></div><div><p class="k">No merchandise</p><p>There’s no central place to buy real, movie-themed items and party kits to complete the movie night.</p></div><div><p class="k">Not family-friendly</p><p>The film’s mature marketing leaves younger viewers and families no safe, kid-friendly way into its fun, energetic world.</p></div></div>
+    <h3 class="serif h3">Solutions</h3>
+    <div class="cols"><div><p class="k">One-click streaming</p><p>A dedicated HD player for the movie, so it’s ready to play straight away without searching other platforms.</p></div><div><p class="k">The official merch store</p><p>A one-stop shop for official themed merch and party kits, built into the same site.</p></div><div><p class="k">A safe space for everyone</p><p>The grown-up parts of the original marketing are left out, so parents and kids can enjoy the movie’s energy together.</p></div></div>
+    <h3 class="serif h3">Usability</h3>
+    <div class="cols"><div><p class="k">A short journey</p><p>A clean layout with few clicks. Users move easily between watching and shopping.</p></div><div><p class="k">Help on demand</p><p>Built-in WhatsApp support gives quick help when something goes wrong.</p></div><div><p class="k">Easy to come back to</p><p>Consistent patterns and a clear structure mean returning users never have to re-learn the site.</p></div><div><p class="k">Quick to get</p><p>Familiar patterns that need no learning, so people spend their time on the movie, not the menus.</p></div></div>
+    </section>
+    <section aria-labelledby="colours" style="margin-top:clamp(72px,9vw,120px)"><p style="margin:0 0 8px;font-size:15px">03</p><h2 id="colours" class="serif" style="margin:0 0 20px;font-weight:300;font-size:clamp(34px,3.6vw,52px);line-height:1.05;letter-spacing:-.025em">Colours</h2>
+    <p style="margin:0 0 32px;max-width:62ch">Two colours carry the whole site: a soft sky blue for calm, and a bold red for energy and the buttons that matter.</p>
+    <div class="sws"><div class="sw"><span style="background:#CFE2F3;border:1px solid #35605F"></span><div><strong style="font-weight:500">Israeli Sky</strong><br>#CFE2F3 · RGB 207, 226, 243</div></div><div class="sw"><span style="background:#E23D3D;"></span><div><strong style="font-weight:500">Boom Boom Red</strong><br>#E23D3D · RGB 226, 61, 61</div></div></div>
+    </section>
+    <section aria-label="Contact" style="margin-top:clamp(72px,9vw,120px);background:#CFE0D8;padding:clamp(40px,6vw,64px) clamp(20px,4vw,40px);box-sizing:border-box;text-align:center">
+    <svg aria-hidden="true" width="120" height="24" style="display:block;margin:0 auto 24px;color:#35605F"><defs><pattern id="ws" width="40" height="24" patternUnits="userSpaceOnUse"><path d="M0 12 Q10 0 20 12 T40 12" fill="none" stroke="currentColor" stroke-width="1"/></pattern></defs><rect width="120" height="24" fill="url(#ws)"/></svg>
+    <h2 class="serif" style="margin:0;font-weight:300;font-size:clamp(36px,4vw,56px);line-height:1.1;letter-spacing:-.02em">Let’s talk</h2>
+    <a class="ul serif" href="mailto:urikochva1@gmail.com" style="display:inline-flex;align-items:center;min-height:56px;margin-top:8px;font-weight:300;font-size:clamp(26px,5.4vw,80px);letter-spacing:-.03em;line-height:1.1;overflow-wrap:anywhere">urikochva1@gmail.com</a>
+    <div style="margin-top:24px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 32px;font-size:17px">
+      <a class="navl" href="https://www.linkedin.com/in/uri-kochva/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </section>
+  </main>
+  <footer style="margin-top:96px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;font-size:15px;color:#4F706C">
+    <span>Uri Kochva · Gan HaShomron, Israel</span>
+    <span>© 2026</span>
+  </footer>
+</div>
+</div>
+</body>
+</html>
